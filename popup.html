@@ -17,6 +17,12 @@
     outline: none;
   }
 
+  .container-fluid {
+    width: 250px;
+    padding: 20px 15px;
+    box-shadow: inset 2px 4px 20px 2px #5d6238;
+  }
+
   #tag {
     min-width: 200px;
   }
@@ -28,22 +34,49 @@
   #content {
     text-align: center;
   }
+
+  .text-align-center {
+    text-align: center;
+  }
+
+  .text-align-center button {
+    width: 60px;
+    padding: 0;
+  }
+
+  .text-align-center button img {
+    width: 60px;
+  }
 </style>
 
 <body>
   <div class="container-fluid">
-    <div class="row">
-      <div class="col-md-8">
-        <input id="tag" value="This is Yen Dog" />
+    <!-- <div class="row"> -->
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label for="inputCity">City</label>
+        <input type="text" class="form-control" id="inputCity">
       </div>
-      <div class="col-md-4">
-        <button id="getGif">Go</button>
+      <div class="form-group col-md-4">
+        <label for="inputState">State</label>
+        <select id="inputState" class="form-control">
+          <option selected>Choose...</option>
+          <option>...</option>
+        </select>
       </div>
-      <div class="col-md-12">
-        <div id="content"></div>
+      <div class="form-group col-md-2">
+        <label for="inputZip">Zip</label>
+        <input type="text" class="form-control" id="inputZip">
+      </div>
+      <div class="form-group col-md-2 text-align-center">
+        <button class="btn">
+          <img src="Gaming-Dice-icon.png" alt="" />
+        </button>
       </div>
     </div>
   </div>
+  <!-- </div> -->
+
   <script src="popup.js"></script>
 </body>
 
